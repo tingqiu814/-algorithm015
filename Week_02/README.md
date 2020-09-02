@@ -10,3 +10,8 @@ Monday: https://leetcode-cn.com/problems/intersection-of-two-arrays-ii/
 优化：
   记录最大值，滑动时最大值与出去的和新增的做对比，减少循环更新次数;
 
+删除最外层的括号: https://leetcode-cn.com/problems/remove-outermost-parentheses/
+这题比较简单，初步想用栈存括号，清到最后是最外层；
+用数组实现也行，最后计数器也可以；
+优化到100% 要用到一些go的特性，如果字符串+=的话会不停复制占用内存，所以用slice
+
