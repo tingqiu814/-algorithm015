@@ -1,15 +1,9 @@
 package main
 
 import (
-	"fmt"
 	"sort"
 )
 
-func main() {
-	fmt.Println("vim-go")
-	var ret = intersect([]int{1, 2, 2, 4}, []int{2, 2})
-	fmt.Println(ret)
-}
 func intersect(nums1 []int, nums2 []int) []int {
 	sort.Ints(nums1)
 	sort.Ints(nums2)
