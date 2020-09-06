@@ -15,6 +15,27 @@ func main() {
 	//fmt.Println(arr2BariTree(in))
 
 	println(isAnagram("anagram", "nagaram"))
+	println("347 top-k-frequent-elements")
+	input := struct {
+		In     []int
+		K      int
+		Expect []int
+	}{
+		[]int{1, 1, 1, 2, 2, 3},
+		2,
+		[]int{1, 2},
+	}
+	fmt.Println("input: ", input, "return :", topKFrequent(input.In, input.K))
+	input = struct {
+		In     []int
+		K      int
+		Expect []int
+	}{
+		[]int{1},
+		1,
+		[]int{1},
+	}
+	fmt.Println("input: ", input, "return :", topKFrequent(input.In, input.K))
 }
 
 type TreeNode struct {
