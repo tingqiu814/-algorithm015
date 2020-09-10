@@ -17,6 +17,12 @@ func main() {
 	start := time.Now().UnixNano()
 	fmt.Println("input: ", List2Arr(input), ", expect [2, 3, 1] , output: ", reversePrint(input))
 	fmt.Println("during: ", GetCostTime(start))
+
+	fmt.Println("combinationSum")
+	start = time.Now().UnixNano()
+	fmt.Println(combinationSum([]int{2, 3, 6, 7}, 7))
+	fmt.Println("during: ", GetCostTime(start))
+
 }
 func GetCostTime(start int64) int64 {
 	end := time.Now().UnixNano()
