@@ -23,6 +23,10 @@ func main() {
 	fmt.Println(combinationSum([]int{2, 3, 6, 7}, 7))
 	fmt.Println("during: ", GetCostTime(start))
 
+	fmt.Println("myPow")
+	fmt.Println("expect 1024: ", myPow(2.0, 10))
+	fmt.Println("expect 0.25: ", myPow(2.0, -2))
+
 }
 func GetCostTime(start int64) int64 {
 	end := time.Now().UnixNano()
