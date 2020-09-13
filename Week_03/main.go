@@ -27,6 +27,15 @@ func main() {
 	fmt.Println("expect 1024: ", myPow(2.0, 10))
 	fmt.Println("expect 0.25: ", myPow(2.0, -2))
 
+	//fmt.Println("subsets")
+	//fmt.Println(subsets([]int{1, 2, 3}))
+	//fmt.Println(subsets([]int{9, 0, 3, 5, 7}))
+
+	fmt.Println("threeSum")
+	//fmt.Println(threeSum([]int{-1, 0, 1, 2, -1, -4}))
+	//fmt.Println(threeSum([]int{0, 0, 0, 0}))
+	fmt.Println(threeSum([]int{-2, 0, 1, 1, 2}))
+
 }
 func GetCostTime(start int64) int64 {
 	end := time.Now().UnixNano()
