@@ -40,7 +40,9 @@ func levelOrder(root *TreeNode) [][]int {
 		if r == nil {
 			return
 		}
-		ret = append(ret, []int{})
+		if len(ret) == level {
+			ret = append(ret, []int{})
+		}
 		ret[level] = append(ret[level], r.Val)
 		dfs(r.Left, level+1)
 		dfs(r.Right, level+1)
