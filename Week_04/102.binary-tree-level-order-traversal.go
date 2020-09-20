@@ -9,14 +9,14 @@ package main
  * }
  */
 func levelOrder2(root *TreeNode) [][]int {
-	ret := [][]int{}
+	var ret [][]int
 	if root == nil {
 		return ret
 	}
 	q := []*TreeNode{root}
 	for i := 0; len(q) > 0; i++ {
 		ret = append(ret, []int{})
-		p := []*TreeNode{}
+		var p []*TreeNode
 		for j := 0; j < len(q); j++ {
 			node := q[j]
 			ret[i] = append(ret[i], node.Val)

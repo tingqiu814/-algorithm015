@@ -23,6 +23,30 @@ func main() {
 	param_8 := obj.IsFull()
 	println(param_1, param_2, param_3, param_4, param_5, param_6, param_7, param_8)
 
+	println("lemonadeChange")
+	println("need true: ", lemonadeChange([]int{5, 5, 5, 10, 20}))
+	println("need true: ", lemonadeChange([]int{5, 5, 10}))
+	println("need false: ", lemonadeChange([]int{10, 10}))
+	println("need false: ", lemonadeChange([]int{5, 5, 10, 10, 20}))
+
+	println("numIslands")
+	println("expect 1: ", numIslands([][]byte{[]byte("11110"), []byte("11010"), []byte("11000"), []byte("00000")}))
+	println("expect 3: ", numIslands([][]byte{
+		[]byte("11000"),
+		[]byte("11000"),
+		[]byte("00100"),
+		[]byte("00011")}))
+	println("expect 1: ", numIslands([][]byte{
+		[]byte("111"),
+		[]byte("010"),
+		[]byte("111")}))
+
+	println("trailingZeroes")
+	println(trailingZeroes(30))
+
+	println("search")
+	println("expect 4 got: ", search([]int{4, 5, 6, 7, 0, 1, 2}, 0))
+
 }
 func GetCostTime(start int64) int64 {
 	end := time.Now().UnixNano()
