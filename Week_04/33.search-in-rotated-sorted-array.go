@@ -1,6 +1,6 @@
 package main
 
-func search(nums []int, target int) int {
+func search2(nums []int, target int) int {
 	low, high := 0, len(nums)-1
 	for low < high-1 {
 		mid := (high + low) / 2
@@ -34,7 +34,7 @@ func search(nums []int, target int) int {
 	return -1
 }
 
-func search2(nums []int, target int) int {
+func search(nums []int, target int) int {
 	// 由于是半单调有序的，并且有边界，可以用二分查找
 	var (
 		left  = 0
@@ -44,7 +44,7 @@ func search2(nums []int, target int) int {
 		return -1
 	}
 	for left < right {
-		var mid = (right - left) / 2
+		var mid = (right + left) / 2
 		if target == nums[mid] {
 			return mid
 		}
